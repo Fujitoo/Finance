@@ -27,7 +27,7 @@ fun CategoriesScreen(
     val uiState by viewModel.uiState.collectAsState()
     var showAddDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
-    var categoryToDelete by remember { mutableStateOf(com.campus.expensetracker.data.entity.Category?>(null)) }
+    var categoryToDelete by remember { mutableStateOf<com.campus.expensetracker.data.entity.Category?>(null) }
 
     Scaffold(
         topBar = {

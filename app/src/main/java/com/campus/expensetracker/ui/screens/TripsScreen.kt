@@ -29,7 +29,7 @@ fun TripsScreen(
     val scope = rememberCoroutineScope()
     var showAddDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
-    var tripToDelete by remember { mutableStateOf(com.campus.expensetracker.data.entity.Trip?>(null)) }
+    var tripToDelete by remember { mutableStateOf<com.campus.expensetracker.data.entity.Trip?>(null) }
 
     Scaffold(
         topBar = {

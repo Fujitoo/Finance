@@ -35,10 +35,10 @@ fun TripDetailScreen(
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    
+
     var showAddFriendDialog by remember { mutableStateOf(false) }
     var showDeleteFriendDialog by remember { mutableStateOf(false) }
-    var friendToDelete by remember { mutableStateOf(com.campus.expensetracker.data.entity.Friend?>(null)) }
+    var friendToDelete by remember { mutableStateOf<com.campus.expensetracker.data.entity.Friend?>(null) }
     var showDeleteExpenseDialog by remember { mutableStateOf(false) }
     var expenseToDelete by remember { mutableStateOf<Expense?>(null) }
     var showShareDialog by remember { mutableStateOf(false) }
