@@ -59,12 +59,24 @@ app/
 # Navigate to project directory
 cd /path/to/Finance
 
+# Make gradlew executable (Linux/Mac)
+chmod +x gradlew
+
 # Build debug APK
 ./gradlew assembleDebug
 
 # The APK will be at:
 # app/build/outputs/apk/debug/app-debug.apk
 ```
+
+### Building with GitHub Actions
+
+Every push to the `master` or `main` branch automatically builds an APK using GitHub Actions.
+
+1. Push your code to GitHub
+2. Go to the **Actions** tab in your repository
+3. Click on the "Build Android APK" workflow run
+4. Download the APK from the artifacts section
 
 ### Installing on Device
 
