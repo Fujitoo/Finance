@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="expense_images"
+        path="expense_images/" />
+    <cache-path
+        name="shared_images"
+        path="shared_images/" />
+    <cache-path
+        name="summary_images"
+        path="summary_images/" />
+</paths>
