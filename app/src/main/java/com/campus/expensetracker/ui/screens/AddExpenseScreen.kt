@@ -187,7 +187,7 @@ fun AddExpenseScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Default.CameraAlt,
+                            imageVector = Icons.Default.PhotoCamera,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
                         )
@@ -279,7 +279,7 @@ fun AddExpenseScreen(
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
-                                    imageVector = Icons.Filled.Warning,
+                                    imageVector = Icons.Default.Report,
                                     contentDescription = null,
                                     tint = MaterialTheme.colorScheme.onErrorContainer
                                 )
