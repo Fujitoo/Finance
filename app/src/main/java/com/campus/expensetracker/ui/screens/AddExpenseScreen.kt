@@ -187,7 +187,7 @@ fun AddExpenseScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Default.AddAPhoto,
+                            imageVector = Icons.Default.CameraAlt,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
                         )
@@ -250,7 +250,7 @@ fun AddExpenseScreen(
                         .height(56.dp),
                     enabled = uiState.formState.amount.isNotEmpty()
                 ) {
-                    Icon(Icons.Filled.Save, contentDescription = null)
+                    Icon(Icons.Filled.Check, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = if (expenseId != null) "Update Expense" else "Save Expense",
@@ -279,7 +279,7 @@ fun AddExpenseScreen(
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
-                                    imageVector = Icons.Filled.Error,
+                                    imageVector = Icons.Filled.Warning,
                                     contentDescription = null,
                                     tint = MaterialTheme.colorScheme.onErrorContainer
                                 )

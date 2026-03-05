@@ -14,6 +14,7 @@ import com.campus.expensetracker.theme.TextSecondary
 import java.text.SimpleDateFormat
 import java.util.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExpenseCard(
     expense: Expense,
@@ -108,6 +109,7 @@ fun ExpenseCard(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TripCard(
     trip: Trip,

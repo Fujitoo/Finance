@@ -16,9 +16,9 @@ sealed class BottomNavItem(
     val icon: ImageVector
 ) {
     object Home : BottomNavItem("home", "Home", Icons.Filled.Home)
-    object Expenses : BottomNavItem("expenses", "Expenses", Icons.Filled.ReceiptLong)
-    object Trips : BottomNavItem("trips", "Trips", Icons.Filled.Flight)
-    object Categories : BottomNavItem("categories", "Categories", Icons.Filled.List)
+    object Expenses : BottomNavItem("expenses", "Expenses", Icons.Filled.Receipt)
+    object Trips : BottomNavItem("trips", "Trips", Icons.Filled.TravelExplore)
+    object Categories : BottomNavItem("categories", "Categories", Icons.Filled.Apps)
 }
 
 @Composable

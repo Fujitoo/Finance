@@ -1,0 +1,93 @@
+﻿2026-03-05T06:49:36.7197768Z ##[group]Run ./gradlew assembleDebug
+2026-03-05T06:49:36.7198146Z [36;1m./gradlew assembleDebug[0m
+2026-03-05T06:49:36.7242970Z shell: /usr/bin/bash -e {0}
+2026-03-05T06:49:36.7243257Z env:
+2026-03-05T06:49:36.7243582Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T06:49:36.7244470Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T06:49:36.7245197Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-03-05T06:49:36.7245731Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-03-05T06:49:36.7246249Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-03-05T06:49:36.7247063Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-03-05T06:49:36.7247909Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-03-05T06:49:36.7248482Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-03-05T06:49:36.7248985Z ##[endgroup]
+2026-03-05T06:49:36.8575153Z Downloading https://services.gradle.org/distributions/gradle-8.2-bin.zip
+2026-03-05T06:49:38.4533292Z ............10%............20%............30%.............40%............50%............60%............70%.............80%............90%............100%
+2026-03-05T06:49:39.5929904Z 
+2026-03-05T06:49:39.5953455Z Welcome to Gradle 8.2!
+2026-03-05T06:49:39.5954327Z 
+2026-03-05T06:49:39.5954882Z Here are the highlights of this release:
+2026-03-05T06:49:39.5956083Z  - Kotlin DSL: new reference documentation, assignment syntax by default
+2026-03-05T06:49:39.5962702Z  - Kotlin DSL is now the default with Gradle init
+2026-03-05T06:49:39.5963792Z  - Improved suggestions to resolve errors in console output
+2026-03-05T06:49:39.5964642Z 
+2026-03-05T06:49:39.5965249Z For more details see https://docs.gradle.org/8.2/release-notes.html
+2026-03-05T06:49:39.5966018Z 
+2026-03-05T06:49:39.6919605Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-03-05T06:50:47.8965017Z > Task :app:preBuild UP-TO-DATE
+2026-03-05T06:50:47.8965659Z > Task :app:preDebugBuild UP-TO-DATE
+2026-03-05T06:50:47.9919135Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2026-03-05T06:50:47.9959792Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+2026-03-05T06:50:58.9928960Z > Task :app:generateDebugResValues
+2026-03-05T06:50:58.9931657Z > Task :app:checkDebugAarMetadata
+2026-03-05T06:50:58.9942642Z > Task :app:mapDebugSourceSetPaths
+2026-03-05T06:50:58.9962991Z > Task :app:generateDebugResources
+2026-03-05T06:50:59.9917970Z > Task :app:packageDebugResources
+2026-03-05T06:51:02.7917372Z > Task :app:mergeDebugResources
+2026-03-05T06:51:03.0967997Z > Task :app:createDebugCompatibleScreenManifests
+2026-03-05T06:51:03.0981109Z > Task :app:extractDeepLinksDebug
+2026-03-05T06:51:03.2946128Z > Task :app:parseDebugLocalResources
+2026-03-05T06:51:03.4940943Z > Task :app:processDebugMainManifest
+2026-03-05T06:51:03.5935290Z > Task :app:processDebugManifest
+2026-03-05T06:51:05.2917496Z > Task :app:javaPreCompileDebug
+2026-03-05T06:51:05.2918018Z > Task :app:mergeDebugShaders
+2026-03-05T06:51:05.3968479Z > Task :app:compileDebugShaders NO-SOURCE
+2026-03-05T06:51:05.3989177Z > Task :app:generateDebugAssets UP-TO-DATE
+2026-03-05T06:51:05.3990096Z > Task :app:mergeDebugAssets
+2026-03-05T06:51:05.4918080Z > Task :app:compressDebugAssets
+2026-03-05T06:51:05.4927876Z > Task :app:desugarDebugFileDependencies
+2026-03-05T06:51:06.1918082Z > Task :app:mergeDebugJniLibFolders
+2026-03-05T06:51:06.1920379Z > Task :app:checkDebugDuplicateClasses
+2026-03-05T06:51:06.2923488Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+2026-03-05T06:51:33.5923697Z > Task :app:processDebugManifestForPackage
+2026-03-05T06:51:36.2917279Z > Task :app:mergeExtDexDebug
+2026-03-05T06:51:38.7924378Z > Task :app:mergeLibDexDebug
+2026-03-05T06:51:40.2917704Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+2026-03-05T06:51:40.5916949Z > Task :app:processDebugResources
+2026-03-05T06:51:41.3919241Z > Task :app:validateSigningDebug
+2026-03-05T06:51:46.4916928Z > Task :app:writeDebugAppMetadata
+2026-03-05T06:51:46.4919631Z > Task :app:writeDebugSigningConfigVersions
+2026-03-05T06:51:54.6924271Z > Task :app:kaptGenerateStubsDebugKotlin
+2026-03-05T06:51:58.3918117Z > Task :app:kaptDebugKotlin
+2026-03-05T06:52:04.7950306Z 
+2026-03-05T06:52:04.7950932Z > Task :app:compileDebugKotlin FAILED
+2026-03-05T06:52:04.7968685Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:19:74 Unresolved reference: ReceiptLong
+2026-03-05T06:52:04.7993409Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:20:65 Unresolved reference: Flight
+2026-03-05T06:52:04.7996417Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Cards.kt:26:5 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.7998975Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Cards.kt:119:5 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8010629Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:91:17 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8015206Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:108:17 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8017702Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:152:9 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8020100Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:165:34 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8022686Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:165:62 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8024826Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:167:22 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T06:52:04.8045982Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:190:57 Unresolved reference: AddAPhoto
+2026-03-05T06:52:04.8047881Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:253:39 Unresolved reference: Save
+2026-03-05T06:52:04.8049703Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:282:64 Unresolved reference: Error
+2026-03-05T06:52:04.8925282Z 
+2026-03-05T06:52:04.8954720Z FAILURE: Build failed with an exception.
+2026-03-05T06:52:04.8955318Z 
+2026-03-05T06:52:04.8956532Z * What went wrong:
+2026-03-05T06:52:04.8982834Z Execution failed for task ':app:compileDebugKotlin'.
+2026-03-05T06:52:04.8985004Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2026-03-05T06:52:04.8986179Z    > Compilation error. See log for more details
+2026-03-05T06:52:04.9924431Z 
+2026-03-05T06:52:04.9925340Z * Try:
+2026-03-05T06:52:04.9926279Z > Run with --stacktrace option to get the stack trace.
+2026-03-05T06:52:04.9931281Z > Run with --info or --debug option to get more log output.
+2026-03-05T06:52:04.9987588Z > Run with --scan to get full insights.
+2026-03-05T06:52:04.9988131Z 28 actionable tasks: 28 executed
+2026-03-05T06:52:04.9988829Z > Get more help at https://help.gradle.org.
+2026-03-05T06:52:04.9989320Z 
+2026-03-05T06:52:04.9989652Z BUILD FAILED in 2m 28s
+2026-03-05T06:52:05.5323389Z ##[error]Process completed with exit code 1.

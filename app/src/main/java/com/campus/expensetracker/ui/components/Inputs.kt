@@ -67,6 +67,7 @@ fun NoteInput(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CategorySelector(
     selectedCategoryId: Long?,
@@ -132,6 +133,7 @@ data class CategoryWithIcon(
     val icon: String
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TripSelector(
     selectedTripId: Long?,
