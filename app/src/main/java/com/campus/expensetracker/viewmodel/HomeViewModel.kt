@@ -64,7 +64,7 @@ class HomeViewModel(
         }
     }
 
-    private fun calculateCategorySummary(expenses: List<Expense>): Map<String, Double> {
+    private fun calculateCategorySummary(expenses: List<Expense>): Map<Long, Double> {
         return expenses.groupBy { it.categoryId }
             .mapValues { (_, expenses) -> expenses.sumOf { it.amount } }
     }

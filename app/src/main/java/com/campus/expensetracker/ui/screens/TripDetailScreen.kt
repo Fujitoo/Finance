@@ -433,22 +433,6 @@ fun TripDetailScreen(
             }
         )
     }
-
-    // Error snackbar
-    uiState.error?.let { error ->
-        Snackbar(
-            modifier = Modifier
-                .padding(16.dp)
-                .align(Alignment.BottomCenter),
-            action = {
-                TextButton(onClick = { viewModel.clearError() }) {
-                    Text("Dismiss", color = MaterialTheme.colorScheme.onError)
-                }
-            }
-        ) {
-            Text(error)
-        }
-    }
 }
 
 private fun shareSummary(context: Context, summary: String) {

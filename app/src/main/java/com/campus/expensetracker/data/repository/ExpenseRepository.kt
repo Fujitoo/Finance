@@ -3,6 +3,7 @@ package com.campus.expensetracker.data.repository
 import com.campus.expensetracker.data.dao.*
 import com.campus.expensetracker.data.entity.*
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -135,32 +136,32 @@ class ExpenseRepository(
 
     // Complex operations for trip balance calculation
     suspend fun calculateTripBalances(tripId: Long): Map<Long, Double> = withContext(Dispatchers.IO) {
-        val friends = friendDao.getFriendsByTripId(tripId)
-        val expenses = expenseDao.getExpensesByTripId(tripId)
-        
+        val friends = friendDao.getFriendsByTripId(tripId).first()
+        val expenses = expenseDao.getExpensesByTripId(tripId).first()
+
         val balances = mutableMapOf<Long, Double>()
-        
+
         // Initialize balances to 0
         friends.forEach { friend ->
             balances[friend.id] = 0.0
         }
-        
+
         // Calculate what each friend paid
         expenses.forEach { expense ->
             expense.paidByFriendId?.let { paidBy ->
                 balances[paidBy] = (balances[paidBy] ?: 0.0) + expense.amount
             }
         }
-        
+
         // Calculate total and equal share
         val total = expenses.sumOf { it.amount }
         val equalShare = if (friends.isNotEmpty()) total / friends.size else 0.0
-        
+
         // Subtract equal share from each friend's balance
         friends.forEach { friend ->
             balances[friend.id] = (balances[friend.id] ?: 0.0) - equalShare
         }
-        
+
         balances
     }
 }
