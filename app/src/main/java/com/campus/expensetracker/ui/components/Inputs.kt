@@ -1,7 +1,12 @@
 package com.campus.expensetracker.ui.components
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -98,9 +103,8 @@ fun CategorySelector(
                     } else null
                 )
             }
-            
-            items(categories.size) { index ->
-                val category = categories[index]
+
+            items(categories) { category ->
                 FilterChip(
                     selected = selectedCategoryId == category.id,
                     onClick = { onCategorySelected(category.id) },

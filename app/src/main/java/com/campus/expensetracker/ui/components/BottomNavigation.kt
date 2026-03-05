@@ -1,11 +1,14 @@
 package com.campus.expensetracker.ui.components
 
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
 
 sealed class BottomNavItem(
     val route: String,
@@ -13,9 +16,9 @@ sealed class BottomNavItem(
     val icon: ImageVector
 ) {
     object Home : BottomNavItem("home", "Home", Icons.Filled.Home)
-    object Expenses : BottomNavItem("expenses", "Expenses", Icons.Filled.Receipt)
-    object Trips : BottomNavItem("trips", "Trips", Icons.Filled.FlightTakeoff)
-    object Categories : BottomNavItem("categories", "Categories", Icons.Filled.Category)
+    object Expenses : BottomNavItem("expenses", "Expenses", Icons.Filled.ReceiptLong)
+    object Trips : BottomNavItem("trips", "Trips", Icons.Filled.Flight)
+    object Categories : BottomNavItem("categories", "Categories", Icons.Filled.List)
 }
 
 @Composable

@@ -14,7 +14,7 @@ data class HomeUiState(
     val totalMonthlyExpenses: Double = 0.0,
     val recentExpenses: List<Expense> = emptyList(),
     val trips: List<Trip> = emptyList(),
-    val categorySummary: Map<String, Double> = emptyMap(),
+    val categorySummary: Map<Long, Double> = emptyMap(),
     val isLoading: Boolean = true
 )
 
@@ -65,7 +65,8 @@ class HomeViewModel(
     }
 
     private fun calculateCategorySummary(expenses: List<Expense>): Map<Long, Double> {
-        return expenses.groupBy { it.categoryId }
+        return expenses.filter { it.categoryId != null }
+            .groupBy { it.categoryId!! }
             .mapValues { (_, expenses) -> expenses.sumOf { it.amount } }
     }
 }

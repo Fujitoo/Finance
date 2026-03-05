@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.campus.expensetracker.data.entity.Expense
 import com.campus.expensetracker.data.repository.ExpenseRepository
 import com.campus.expensetracker.ui.components.*
@@ -186,7 +187,7 @@ fun AddExpenseScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
-                            imageVector = Icons.Default.AddPhotoAlternate,
+                            imageVector = Icons.Default.AddAPhoto,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
                         )
@@ -249,7 +250,7 @@ fun AddExpenseScreen(
                         .height(56.dp),
                     enabled = uiState.formState.amount.isNotEmpty()
                 ) {
-                    Icon(Icons.Default.Save, contentDescription = null)
+                    Icon(Icons.Filled.Save, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = if (expenseId != null) "Update Expense" else "Save Expense",
@@ -278,7 +279,7 @@ fun AddExpenseScreen(
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
-                                    imageVector = Icons.Default.Error,
+                                    imageVector = Icons.Filled.Error,
                                     contentDescription = null,
                                     tint = MaterialTheme.colorScheme.onErrorContainer
                                 )
