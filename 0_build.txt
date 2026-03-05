@@ -1,0 +1,343 @@
+﻿2026-03-05T00:15:51.4097104Z Current runner version: '2.332.0'
+2026-03-05T00:15:51.4121724Z ##[group]Runner Image Provisioner
+2026-03-05T00:15:51.4122926Z Hosted Compute Agent
+2026-03-05T00:15:51.4123518Z Version: 20260213.493
+2026-03-05T00:15:51.4124135Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-05T00:15:51.4124954Z Build Date: 2026-02-13T00:28:41Z
+2026-03-05T00:15:51.4125592Z Worker ID: {2519ae39-0ce7-4cdf-8bee-0b375e7043ec}
+2026-03-05T00:15:51.4126281Z Azure Region: westus3
+2026-03-05T00:15:51.4126881Z ##[endgroup]
+2026-03-05T00:15:51.4128229Z ##[group]Operating System
+2026-03-05T00:15:51.4128811Z Ubuntu
+2026-03-05T00:15:51.4129384Z 24.04.3
+2026-03-05T00:15:51.4129872Z LTS
+2026-03-05T00:15:51.4130309Z ##[endgroup]
+2026-03-05T00:15:51.4130883Z ##[group]Runner Image
+2026-03-05T00:15:51.4131413Z Image: ubuntu-24.04
+2026-03-05T00:15:51.4131986Z Version: 20260302.42.1
+2026-03-05T00:15:51.4133571Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260302.42/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-05T00:15:51.4135014Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260302.42
+2026-03-05T00:15:51.4136013Z ##[endgroup]
+2026-03-05T00:15:51.4137152Z ##[group]GITHUB_TOKEN Permissions
+2026-03-05T00:15:51.4139076Z Contents: read
+2026-03-05T00:15:51.4139661Z Metadata: read
+2026-03-05T00:15:51.4140202Z Packages: read
+2026-03-05T00:15:51.4140659Z ##[endgroup]
+2026-03-05T00:15:51.4143204Z Secret source: Actions
+2026-03-05T00:15:51.4143956Z Prepare workflow directory
+2026-03-05T00:15:51.4479604Z Prepare all required actions
+2026-03-05T00:15:51.4519533Z Getting action download info
+2026-03-05T00:15:51.9549592Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-05T00:15:52.1156518Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+2026-03-05T00:15:53.1282459Z Download action repository 'gradle/actions@v3' (SHA:d9c87d481d55275bb5441eef3fe0e46805f9ef70)
+2026-03-05T00:15:54.3953941Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-03-05T00:15:54.6330002Z Complete job name: build
+2026-03-05T00:15:54.6993259Z ##[group]Run actions/checkout@v4
+2026-03-05T00:15:54.6994133Z with:
+2026-03-05T00:15:54.6994386Z   repository: Fujitoo/Finance
+2026-03-05T00:15:54.6994847Z   token: ***
+2026-03-05T00:15:54.6995078Z   ssh-strict: true
+2026-03-05T00:15:54.6995310Z   ssh-user: git
+2026-03-05T00:15:54.6995558Z   persist-credentials: true
+2026-03-05T00:15:54.6995814Z   clean: true
+2026-03-05T00:15:54.6996062Z   sparse-checkout-cone-mode: true
+2026-03-05T00:15:54.6996349Z   fetch-depth: 1
+2026-03-05T00:15:54.6996582Z   fetch-tags: false
+2026-03-05T00:15:54.6996823Z   show-progress: true
+2026-03-05T00:15:54.6997065Z   lfs: false
+2026-03-05T00:15:54.6997286Z   submodules: false
+2026-03-05T00:15:54.6997519Z   set-safe-directory: true
+2026-03-05T00:15:54.6997976Z ##[endgroup]
+2026-03-05T00:15:54.8097639Z Syncing repository: Fujitoo/Finance
+2026-03-05T00:15:54.8099530Z ##[group]Getting Git version info
+2026-03-05T00:15:54.8099977Z Working directory is '/home/runner/work/Finance/Finance'
+2026-03-05T00:15:54.8100651Z [command]/usr/bin/git version
+2026-03-05T00:15:54.8144920Z git version 2.53.0
+2026-03-05T00:15:54.8168994Z ##[endgroup]
+2026-03-05T00:15:54.8183160Z Temporarily overriding HOME='/home/runner/work/_temp/405a18ab-aa0b-4485-858b-9d88d14593d1' before making global git config changes
+2026-03-05T00:15:54.8184280Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-05T00:15:54.8196076Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Finance/Finance
+2026-03-05T00:15:54.8235619Z Deleting the contents of '/home/runner/work/Finance/Finance'
+2026-03-05T00:15:54.8239462Z ##[group]Initializing the repository
+2026-03-05T00:15:54.8243782Z [command]/usr/bin/git init /home/runner/work/Finance/Finance
+2026-03-05T00:15:54.8316534Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-05T00:15:54.8317741Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-05T00:15:54.8318594Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-05T00:15:54.8319238Z hint: call:
+2026-03-05T00:15:54.8319565Z hint:
+2026-03-05T00:15:54.8320022Z hint: 	git config --global init.defaultBranch <name>
+2026-03-05T00:15:54.8320626Z hint:
+2026-03-05T00:15:54.8321118Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-05T00:15:54.8321991Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-05T00:15:54.8322822Z hint:
+2026-03-05T00:15:54.8323131Z hint: 	git branch -m <name>
+2026-03-05T00:15:54.8323406Z hint:
+2026-03-05T00:15:54.8323758Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-05T00:15:54.8324367Z Initialized empty Git repository in /home/runner/work/Finance/Finance/.git/
+2026-03-05T00:15:54.8333408Z [command]/usr/bin/git remote add origin https://github.com/Fujitoo/Finance
+2026-03-05T00:15:54.8368120Z ##[endgroup]
+2026-03-05T00:15:54.8368673Z ##[group]Disabling automatic garbage collection
+2026-03-05T00:15:54.8372578Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-05T00:15:54.8403682Z ##[endgroup]
+2026-03-05T00:15:54.8404338Z ##[group]Setting up auth
+2026-03-05T00:15:54.8411217Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-05T00:15:54.8445530Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-05T00:15:54.8768805Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-05T00:15:54.8801630Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-05T00:15:54.9055259Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-05T00:15:54.9089273Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-05T00:15:54.9356199Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-05T00:15:54.9394192Z ##[endgroup]
+2026-03-05T00:15:54.9394916Z ##[group]Fetching the repository
+2026-03-05T00:15:54.9403636Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0d31ec57997c897b952fba441ac91bd9b516b602:refs/remotes/origin/master
+2026-03-05T00:15:55.3888487Z From https://github.com/Fujitoo/Finance
+2026-03-05T00:15:55.3889301Z  * [new ref]         0d31ec57997c897b952fba441ac91bd9b516b602 -> origin/master
+2026-03-05T00:15:55.3928375Z ##[endgroup]
+2026-03-05T00:15:55.3929018Z ##[group]Determining the checkout info
+2026-03-05T00:15:55.3930365Z ##[endgroup]
+2026-03-05T00:15:55.3936322Z [command]/usr/bin/git sparse-checkout disable
+2026-03-05T00:15:55.3979729Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-05T00:15:55.4008220Z ##[group]Checking out the ref
+2026-03-05T00:15:55.4013331Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-05T00:15:55.4109350Z Reset branch 'master'
+2026-03-05T00:15:55.4111793Z branch 'master' set up to track 'origin/master'.
+2026-03-05T00:15:55.4118813Z ##[endgroup]
+2026-03-05T00:15:55.4157618Z [command]/usr/bin/git log -1 --format=%H
+2026-03-05T00:15:55.4182977Z 0d31ec57997c897b952fba441ac91bd9b516b602
+2026-03-05T00:15:55.4497163Z ##[group]Run actions/setup-java@v4
+2026-03-05T00:15:55.4497481Z with:
+2026-03-05T00:15:55.4497701Z   java-version: 17
+2026-03-05T00:15:55.4497946Z   distribution: temurin
+2026-03-05T00:15:55.4498188Z   java-package: jdk
+2026-03-05T00:15:55.4498426Z   check-latest: false
+2026-03-05T00:15:55.4498849Z   server-id: github
+2026-03-05T00:15:55.4499080Z   server-username: GITHUB_ACTOR
+2026-03-05T00:15:55.4499352Z   server-password: GITHUB_TOKEN
+2026-03-05T00:15:55.4499620Z   overwrite-settings: true
+2026-03-05T00:15:55.4499874Z   job-status: success
+2026-03-05T00:15:55.4500298Z   token: ***
+2026-03-05T00:15:55.4500531Z ##[endgroup]
+2026-03-05T00:15:55.6479285Z ##[group]Installed distributions
+2026-03-05T00:15:55.6530856Z Resolved Java 17.0.18+8 from tool-cache
+2026-03-05T00:15:55.6531700Z Setting Java 17.0.18+8 as the default
+2026-03-05T00:15:55.6543660Z Creating toolchains.xml for JDK version 17 from temurin
+2026-03-05T00:15:55.6615399Z Writing to /home/runner/.m2/toolchains.xml
+2026-03-05T00:15:55.6615926Z 
+2026-03-05T00:15:55.6616292Z Java configuration:
+2026-03-05T00:15:55.6617683Z   Distribution: temurin
+2026-03-05T00:15:55.6618135Z   Version: 17.0.18+8
+2026-03-05T00:15:55.6618786Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:55.6619304Z 
+2026-03-05T00:15:55.6619701Z ##[endgroup]
+2026-03-05T00:15:55.6638969Z Creating settings.xml with server-id: github
+2026-03-05T00:15:55.6640311Z Writing to /home/runner/.m2/settings.xml
+2026-03-05T00:15:55.6875708Z ##[group]Run gradle/actions/setup-gradle@v3
+2026-03-05T00:15:55.6876045Z with:
+2026-03-05T00:15:55.6876277Z   cache-disabled: false
+2026-03-05T00:15:55.6876530Z   cache-read-only: false
+2026-03-05T00:15:55.6876794Z   cache-write-only: false
+2026-03-05T00:15:55.6877067Z   cache-overwrite-existing: false
+2026-03-05T00:15:55.6877408Z   gradle-home-cache-includes: caches
+notifications
+
+2026-03-05T00:15:55.6877766Z   gradle-home-cache-cleanup: false
+2026-03-05T00:15:55.6878057Z   add-job-summary: always
+2026-03-05T00:15:55.6878345Z   add-job-summary-as-pr-comment: never
+2026-03-05T00:15:55.6878650Z   dependency-graph: disabled
+2026-03-05T00:15:55.6878966Z   dependency-graph-continue-on-failure: true
+2026-03-05T00:15:55.6879285Z   build-scan-publish: false
+2026-03-05T00:15:55.6879562Z   validate-wrappers: false
+2026-03-05T00:15:55.6879843Z   generate-job-summary: true
+2026-03-05T00:15:55.6880130Z   gradle-home-cache-strict-match: false
+2026-03-05T00:15:55.6880465Z   workflow-job-context: null
+2026-03-05T00:15:55.6880903Z   github-token: ***
+2026-03-05T00:15:55.6881147Z env:
+2026-03-05T00:15:55.6881481Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:55.6882000Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:55.6882422Z ##[endgroup]
+2026-03-05T00:15:56.0571586Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-03-05T00:15:56.0574738Z ##[group]Restore Gradle state from cache
+2026-03-05T00:15:56.1484667Z ##[warning]Failed to restore gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-0d31ec57997c897b952fba441ac91bd9b516b602: Error: Cache service responded with 400
+2026-03-05T00:15:56.1548772Z Gradle User Home cache not found. Will initialize empty.
+2026-03-05T00:15:56.1549605Z ##[endgroup]
+2026-03-05T00:15:56.1676923Z ##[group]Run chmod +x gradlew
+2026-03-05T00:15:56.1677261Z [36;1mchmod +x gradlew[0m
+2026-03-05T00:15:56.1731501Z shell: /usr/bin/bash -e {0}
+2026-03-05T00:15:56.1731770Z env:
+2026-03-05T00:15:56.1732071Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:56.1732561Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:56.1733277Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-03-05T00:15:56.1733579Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-03-05T00:15:56.1733867Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-03-05T00:15:56.1734277Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-03-05T00:15:56.1734747Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-03-05T00:15:56.1735050Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-03-05T00:15:56.1735300Z ##[endgroup]
+2026-03-05T00:15:56.1871713Z ##[group]Run ./gradlew assembleDebug
+2026-03-05T00:15:56.1872020Z [36;1m./gradlew assembleDebug[0m
+2026-03-05T00:15:56.1918957Z shell: /usr/bin/bash -e {0}
+2026-03-05T00:15:56.1919205Z env:
+2026-03-05T00:15:56.1919495Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:56.1919979Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+2026-03-05T00:15:56.1920371Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-03-05T00:15:56.1920672Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-03-05T00:15:56.1920946Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-03-05T00:15:56.1921364Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-03-05T00:15:56.1921832Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-03-05T00:15:56.1922138Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-03-05T00:15:56.1922386Z ##[endgroup]
+2026-03-05T00:15:56.3092435Z Downloading https://services.gradle.org/distributions/gradle-8.2-bin.zip
+2026-03-05T00:15:58.3399646Z ............10%............20%............30%.............40%............50%............60%............70%.............80%............90%............100%
+2026-03-05T00:15:59.4559908Z 
+2026-03-05T00:15:59.4562018Z Welcome to Gradle 8.2!
+2026-03-05T00:15:59.4562967Z 
+2026-03-05T00:15:59.4563494Z Here are the highlights of this release:
+2026-03-05T00:15:59.4564498Z  - Kotlin DSL: new reference documentation, assignment syntax by default
+2026-03-05T00:15:59.4606495Z  - Kotlin DSL is now the default with Gradle init
+2026-03-05T00:15:59.4607529Z  - Improved suggestions to resolve errors in console output
+2026-03-05T00:15:59.4608373Z 
+2026-03-05T00:15:59.4608908Z For more details see https://docs.gradle.org/8.2/release-notes.html
+2026-03-05T00:15:59.4609625Z 
+2026-03-05T00:15:59.5547286Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-03-05T00:17:38.7574711Z > Task :app:preBuild UP-TO-DATE
+2026-03-05T00:17:38.7579657Z > Task :app:preDebugBuild UP-TO-DATE
+2026-03-05T00:17:38.7584540Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2026-03-05T00:17:38.7585890Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+2026-03-05T00:18:08.7548359Z > Task :app:checkDebugAarMetadata
+2026-03-05T00:18:41.1560023Z > Task :app:generateDebugResValues
+2026-03-05T00:18:41.2551637Z > Task :app:mapDebugSourceSetPaths
+2026-03-05T00:18:41.2558534Z > Task :app:generateDebugResources
+2026-03-05T00:18:42.0545903Z > Task :app:packageDebugResources
+2026-03-05T00:18:42.7554344Z > Task :app:mergeDebugResources
+2026-03-05T00:18:43.0560731Z > Task :app:createDebugCompatibleScreenManifests
+2026-03-05T00:18:43.0563807Z > Task :app:extractDeepLinksDebug
+2026-03-05T00:18:43.2546872Z > Task :app:parseDebugLocalResources
+2026-03-05T00:18:43.3568153Z > Task :app:processDebugMainManifest
+2026-03-05T00:18:43.4547927Z > Task :app:processDebugManifest
+2026-03-05T00:18:50.6547551Z > Task :app:javaPreCompileDebug
+2026-03-05T00:18:50.6551767Z > Task :app:mergeDebugShaders
+2026-03-05T00:18:50.7553781Z > Task :app:compileDebugShaders NO-SOURCE
+2026-03-05T00:18:50.7576895Z > Task :app:generateDebugAssets UP-TO-DATE
+2026-03-05T00:18:50.7577829Z > Task :app:mergeDebugAssets
+2026-03-05T00:18:50.7594529Z > Task :app:compressDebugAssets
+2026-03-05T00:18:50.7595030Z > Task :app:desugarDebugFileDependencies
+2026-03-05T00:18:51.9550368Z > Task :app:mergeDebugJniLibFolders
+2026-03-05T00:18:51.9554018Z > Task :app:checkDebugDuplicateClasses
+2026-03-05T00:18:52.0563411Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+2026-03-05T00:19:13.4545361Z > Task :app:processDebugManifestForPackage
+2026-03-05T00:19:22.0545883Z > Task :app:mergeExtDexDebug
+2026-03-05T00:19:24.4545724Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+2026-03-05T00:19:24.5545460Z > Task :app:mergeLibDexDebug
+2026-03-05T00:19:24.9545058Z > Task :app:processDebugResources
+2026-03-05T00:19:25.3545304Z > Task :app:validateSigningDebug
+2026-03-05T00:19:31.1545272Z > Task :app:writeDebugAppMetadata
+2026-03-05T00:19:31.1546611Z > Task :app:writeDebugSigningConfigVersions
+2026-03-05T00:19:39.0582005Z > Task :app:kaptGenerateStubsDebugKotlin
+2026-03-05T00:19:42.7545124Z > Task :app:kaptDebugKotlin
+2026-03-05T00:19:50.1549602Z 
+2026-03-05T00:19:50.1551739Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:16:74 Unresolved reference: Receipt
+2026-03-05T00:19:50.1554098Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:17:65 Unresolved reference: FlightTakeoff
+2026-03-05T00:19:50.1556169Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:18:80 Unresolved reference: Category
+2026-03-05T00:19:50.1558104Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:25:15 Unresolved reference: Modifier
+2026-03-05T00:19:50.1564523Z > Task :app:compileDebugKotlin FAILED
+2026-03-05T00:19:50.1579972Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:25:26 Unresolved reference: Modifier
+2026-03-05T00:19:50.1582047Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/BottomNavigation.kt:30:28 Unresolved reference: dp
+2026-03-05T00:19:50.1584523Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Cards.kt:26:5 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1586984Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Cards.kt:119:5 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1592553Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:80:9 Unresolved reference: LazyRow
+2026-03-05T00:19:50.1594968Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:85:13 Unresolved reference: item
+2026-03-05T00:19:50.1597113Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:86:17 @Composable invocations can only happen from the context of a @Composable function
+2026-03-05T00:19:50.1600937Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:86:17 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1602989Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:93:47 Unresolved reference: Icons
+2026-03-05T00:19:50.1604522Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:102:13 Unresolved reference: items
+2026-03-05T00:19:50.1606328Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:102:38 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-03-05T00:19:50.1608355Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:104:17 @Composable invocations can only happen from the context of a @Composable function
+2026-03-05T00:19:50.1610455Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:104:17 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1612351Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:111:47 Unresolved reference: Icons
+2026-03-05T00:19:50.1614861Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:148:9 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1617078Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:161:34 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1619376Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:161:62 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1621457Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/components/Inputs.kt:163:22 This material API is experimental and is likely to change or to be removed in the future.
+2026-03-05T00:19:50.1623738Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:34:39 Unresolved reference: viewModel
+2026-03-05T00:19:50.1625589Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:189:57 Unresolved reference: AddPhotoAlternate
+2026-03-05T00:19:50.1627429Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:252:40 Unresolved reference: Save
+2026-03-05T00:19:50.1629031Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/AddExpenseScreen.kt:281:65 Unresolved reference: Error
+2026-03-05T00:19:50.1630741Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/CategoriesScreen.kt:23:42 Unresolved reference: viewModel
+2026-03-05T00:19:50.1632386Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/CategoriesScreen.kt:56:36 Unresolved reference: Alignment
+2026-03-05T00:19:50.1634278Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/CategoriesScreen.kt:65:36 Unresolved reference: Alignment
+2026-03-05T00:19:50.1635947Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/CategoriesScreen.kt:67:46 Unresolved reference: Alignment
+2026-03-05T00:19:50.1637541Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/HomeScreen.kt:34:36 Unresolved reference: viewModel
+2026-03-05T00:19:50.1639255Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/TripDetailScreen.kt:32:42 Unresolved reference: viewModel
+2026-03-05T00:19:50.1640973Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/TripsScreen.kt:59:36 Unresolved reference: Alignment
+2026-03-05T00:19:50.1642616Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/TripsScreen.kt:68:36 Unresolved reference: Alignment
+2026-03-05T00:19:50.1655200Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/TripsScreen.kt:70:46 Unresolved reference: Alignment
+2026-03-05T00:19:50.1657256Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/ui/screens/TripsScreen.kt:97:45 This foundation API is experimental and is likely to change or be removed in the future.
+2026-03-05T00:19:50.1659698Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/viewmodel/HomeViewModel.kt:60:39 Type mismatch: inferred type is Map<Long, Double> but Map<String, Double> was expected
+2026-03-05T00:19:50.1661902Z e: file:///home/runner/work/Finance/Finance/app/src/main/java/com/campus/expensetracker/viewmodel/HomeViewModel.kt:69:14 Type mismatch: inferred type is Long? but Long was expected
+2026-03-05T00:19:50.2546709Z 
+2026-03-05T00:19:50.2551993Z FAILURE: Build failed with an exception.
+2026-03-05T00:19:50.2552418Z 28 actionable tasks: 28 executed
+2026-03-05T00:19:50.2553241Z 
+2026-03-05T00:19:50.2553579Z * What went wrong:
+2026-03-05T00:19:50.2554767Z Execution failed for task ':app:compileDebugKotlin'.
+2026-03-05T00:19:50.2556036Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2026-03-05T00:19:50.2557369Z    > Compilation error. See log for more details
+2026-03-05T00:19:50.2557681Z 
+2026-03-05T00:19:50.2557785Z * Try:
+2026-03-05T00:19:50.2558130Z > Run with --stacktrace option to get the stack trace.
+2026-03-05T00:19:50.2558860Z > Run with --info or --debug option to get more log output.
+2026-03-05T00:19:50.2559365Z > Run with --scan to get full insights.
+2026-03-05T00:19:50.2559809Z > Get more help at https://help.gradle.org.
+2026-03-05T00:19:50.2560114Z 
+2026-03-05T00:19:50.2560239Z BUILD FAILED in 3m 53s
+2026-03-05T00:19:50.7166595Z ##[error]Process completed with exit code 1.
+2026-03-05T00:19:50.7342165Z Post job cleanup.
+2026-03-05T00:19:50.9734506Z In post-action step
+2026-03-05T00:19:50.9743070Z Stopping all Gradle daemons before saving Gradle User Home state
+2026-03-05T00:19:50.9744127Z Stopping Gradle daemons for /home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2
+2026-03-05T00:19:50.9763663Z [command]/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2/bin/gradle --stop
+2026-03-05T00:19:51.8116707Z Stopping Daemon(s)
+2026-03-05T00:19:51.8347847Z 1 Daemon stopped
+2026-03-05T00:19:51.8488482Z ##[group]Caching Gradle state
+2026-03-05T00:19:51.8888519Z Caching generated-gradle-jars with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-api-8.2.jar' and cache key: gradle-generated-gradle-jars-v1-5f6a8613b478fd816378c9834ad14e25
+2026-03-05T00:19:51.8897645Z Caching generated-gradle-jars with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-kotlin-dsl-extensions-8.2.jar' and cache key: gradle-generated-gradle-jars-v1-688225baeac4a3a51a617774fb1fe1f4
+2026-03-05T00:19:51.8935435Z Caching wrapper-zips with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and cache key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342
+2026-03-05T00:19:51.9143216Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:51.9145098Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:51.9219637Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:52.0309938Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-kotlin-dsl-extensions-8.2.jar' and key: gradle-generated-gradle-jars-v1-688225baeac4a3a51a617774fb1fe1f4: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KMyoaQAAAAAhK7YO/MIiSLI15dD8yi2hUEhYMzFFREdFMDIwOQBFZGdl
+2026-03-05T00:19:52.5562489Z Caching dependencies with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and cache key: gradle-dependencies-v1-a59fb9bad7dae2380003bdbb1071961c
+2026-03-05T00:19:52.6868404Z Caching instrumented-jars with path '/home/runner/.gradle/caches/jars-*/*/' and cache key: gradle-instrumented-jars-v1-590e05ccb8d3e84d050be56962bf1992
+2026-03-05T00:19:52.7085394Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KMyoaQAAAABBsuzhc45HQYUHXy/nyxlQUEhYMzFFREdFMDIwOQBFZGdl
+2026-03-05T00:19:52.7725367Z Caching kotlin-dsl with path '/home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/
+2026-03-05T00:19:52.7726543Z /home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/' and cache key: gradle-kotlin-dsl-v1-8da7bec1e4be09d148c921cc2cfb1c82
+2026-03-05T00:19:52.8056212Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-api-8.2.jar' and key: gradle-generated-gradle-jars-v1-5f6a8613b478fd816378c9834ad14e25: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KMyoaQAAAACctFYJZAg/TZvIpKEf2rwMUEhYMzFFREdFMDYxMABFZGdl
+2026-03-05T00:19:52.8528400Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:52.9053814Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:52.9748736Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/
+/home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/' and key: gradle-kotlin-dsl-v1-8da7bec1e4be09d148c921cc2cfb1c82: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KMyoaQAAAABnqg6ssl8cS6BliFQPrs+SUEhYMzFFREdFMDYxMgBFZGdl
+2026-03-05T00:19:53.3284453Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:54.3245829Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/jars-*/*/' and key: gradle-instrumented-jars-v1-590e05ccb8d3e84d050be56962bf1992: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KsyoaQAAAACuwwAnlPH2SYw3UYwuPa0IUEhYMzFFREdFMDUxNQBFZGdl
+2026-03-05T00:19:54.4254537Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and key: gradle-dependencies-v1-a59fb9bad7dae2380003bdbb1071961c: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0KsyoaQAAAAC0QtH5IqpaQ6+NvzQdDuzOUEhYMzFFREdFMDIyMABFZGdl
+2026-03-05T00:19:54.5534007Z Caching Gradle User Home with cache key: gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-0d31ec57997c897b952fba441ac91bd9b516b602
+2026-03-05T00:19:54.5639042Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Finance/Finance --files-from manifest.txt --use-compress-program zstdmt
+2026-03-05T00:19:55.0822119Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle' and key: gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-0d31ec57997c897b952fba441ac91bd9b516b602: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0K8yoaQAAAABCJf3kKnTbSK8WAG6mCv5WUEhYMzFFREdFMDYxMwBFZGdl
+2026-03-05T00:19:55.0825204Z ##[endgroup]
+2026-03-05T00:19:55.0827245Z Generating Job Summary
+2026-03-05T00:19:55.0840603Z Completed post-action step
+2026-03-05T00:19:55.1015790Z Post job cleanup.
+2026-03-05T00:19:55.2785823Z Post job cleanup.
+2026-03-05T00:19:55.3767922Z [command]/usr/bin/git version
+2026-03-05T00:19:55.3806621Z git version 2.53.0
+2026-03-05T00:19:55.3848666Z Temporarily overriding HOME='/home/runner/work/_temp/53999bd6-b0a9-4d48-931c-2c5a7707961d' before making global git config changes
+2026-03-05T00:19:55.3849852Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-05T00:19:55.3854564Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Finance/Finance
+2026-03-05T00:19:55.3893061Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-05T00:19:55.3928430Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-05T00:19:55.4191404Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-05T00:19:55.4215440Z http.https://github.com/.extraheader
+2026-03-05T00:19:55.4228150Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-05T00:19:55.4263588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-05T00:19:55.4521874Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-05T00:19:55.4556037Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-05T00:19:55.4929992Z Cleaning up orphan processes
